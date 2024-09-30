@@ -22,7 +22,8 @@ const InputContainer = styled.input`
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 250px;
+  max-width: 250px;
+  width:auto;
   margin-right: 10px;
   border-radius: 1rem;
 
@@ -38,6 +39,7 @@ const InputContainer = styled.input`
 export default function Input({title}) {
 
     const [email, setEmail] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
@@ -45,7 +47,7 @@ export default function Input({title}) {
       if (!email) return;
   
       try {
-        const response = await fetch('/api/subscribe', {
+        const response = await fetch('pages/api/subscribe', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -54,10 +56,10 @@ export default function Input({title}) {
         });
   
         if (response.ok) {
-          alert('Email enviado com sucesso!');
-          setEmail('');
+        setIsSubmitted(true);
+        setEmail('');
         } else {
-          alert('Erro ao enviar o email.');
+          alert('Erro ao salvar o email.');
         }
       } catch (error) {
         console.error('Erro:', error);
@@ -71,9 +73,17 @@ export default function Input({title}) {
 <>
 <Titulo>{title}</Titulo>
         <InputWrapper>
-        <InputContainer type="email" placeholder="Escreva aqui seu email"       value={email}
-        onChange={(e) => setEmail(e.target.value)}/>
-        <Button label="Enviar" variant='md'  onClick={handleSubmit} />
+
+        <InputContainer 
+        type="email" 
+        placeholder={isSubmitted ? "Entraremos em contato!" : "Escreva aqui seu email"}   
+        value={email}
+        onChange={(e) => setEmail(e.target.value) } 
+        disabled={isSubmitted}
+        />
+
+        {!isSubmitted && (<Button label="Enviar" variant='md'  onClick={handleSubmit}/>)} 
+
       </InputWrapper>
       </>
     )

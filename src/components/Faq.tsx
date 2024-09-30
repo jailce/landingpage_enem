@@ -2,15 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const FaqSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 1rem;
-  justify-content: center; /* Alinhamento horizontal ao centro */
-  align-items: center; /* Alinhamento vertical ao centro */
-  background-color: #e2e2e2; /* Cor de fundo cinza */
-  height: auto; /* Altura do header */
-`;
+
 
 const FaqContainer = styled.div`
   display: flex;
@@ -57,7 +49,7 @@ interface FaqData {
   
   export default function Faq({ title, faqItems }: FaqProps) {
     return (
-      <FaqSection>
+
         <FaqContainer>
           <Titulo>{title}</Titulo>
   
@@ -68,6 +60,6 @@ interface FaqData {
             </FaqItem>
           ))}
         </FaqContainer>
-      </FaqSection>
+
     );
   }
