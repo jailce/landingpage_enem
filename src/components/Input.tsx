@@ -8,7 +8,7 @@ const Titulo = styled.p`
   font-weight: 800;
 
   text-align: center;
-  padding: 10px;
+  padding-bottom: 10px;
 `;
 const InputWrapper = styled.div`
   display: flex;
@@ -70,7 +70,7 @@ export default function Input({title}) {
 
     return (
 
-<>
+<div className="mt-6 mb-8" >
 <Titulo>{title}</Titulo>
         <InputWrapper>
 
@@ -85,7 +85,7 @@ export default function Input({title}) {
         {!isSubmitted && (<Button label="Enviar" variant='md'  onClick={handleSubmit}/>)} 
 
       </InputWrapper>
-      </>
+      </div >
     )
 
 

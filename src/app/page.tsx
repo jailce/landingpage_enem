@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -6,6 +7,9 @@ import Faq from "../components/Faq";
 import Input from "../components/Input";
 import Footer from "../components/Footer";
 import Section from "../components/Section";
+import styled from "styled-components";
+
+
 
 const faqData = [
   {
@@ -29,28 +33,48 @@ const faqData = [
       "Gancho para promover a sala do mestre caso professores caiam nesse funil.",
   },
 ];
+
+const Background = styled.div`
+
+position: relative;
+background-color: #00d170;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/pattern.png");
+    opacity: 9%;
+  }
+`;
 export default function Home() {
   return (
     <>
-      <Header />
+      <Background>
+   
       <Hero />
+      </Background>
 
       <Section>
         <Screens />
       </Section>
 
-      <Section>
+      <Section bgColor={"#fdffb5"}> 
         <Faq title="Perguntas Frequentes" faqItems={faqData} />
       </Section>
 
       <Section>
         <Input
-          className="flex flex-col  justify-center items-center bg-black h-auto"
+        
           title="Inscreva-se"
         />
       </Section>
 
-      <Section>
+      <Section bgColor={"#2E2F38"}>
         <Footer />
       </Section>
     </>

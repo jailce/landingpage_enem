@@ -7,6 +7,11 @@ import Image from 'next/image';
 // const logo = require('../assets/logo.png');
 
 const Logo = styled.div`
+max-width:108px;
+max-height: 58px;
+
+
+
   width: 108px;
   height: 100%;
   position: relative;
@@ -14,10 +19,9 @@ const Logo = styled.div`
 
 const HeaderContainer = styled.header`
   display: flex;
-  
   justify-content: center; /* Alinhamento horizontal ao centro */
   align-items: center; /* Alinhamento vertical ao centro */
-  background-color: #b0b0b0; /* Cor de fundo cinza */
+padding: 10px;
   height: 58px; /* Altura do header */
 
 `
@@ -28,11 +32,14 @@ export default function Header()  {
 
 <Logo>
 <Image
-          src="/assets/logo.png" // Caminho para a logo (certifique-se de que a logo esteja na pasta public)
-          alt="Logo"
-          fill={true}
-        objectFit="contain"
-          priority // Carrega a logo com prioridade
+         src="/assets/logo.png"
+         alt="Logo"
+         layout="intrinsic"
+         width={108}
+         height={58}
+         objectFit="contain"
+         priority
+
         />
 
 

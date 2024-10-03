@@ -4,19 +4,19 @@ import "./globals.css";
 
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  src: "./fonts/Nunito-VariableFont_wght.ttf",
+  variable: "--font-nunito-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+  src: "./fonts/Nunito-Italic-VariableFont_wght.ttf",
+  variable: "--font-nunito-italic",
   weight: "100 900",
 });
 
 export const metadata: Metadata = {
   title: "ENEM 2024 - Simuladores ENEM",
-  description: "Simuladores com Ranking",
+  description: "Simulado com Ranking",
 };
 
 export default function RootLayout({

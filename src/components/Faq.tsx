@@ -11,7 +11,7 @@ const FaqContainer = styled.div`
   max-width: 768px;
   justify-content: center; /* Alinhamento horizontal ao centro */
   align-items: center; /* Alinhamento vertical ao centro */
-  background-color: #d6d5d5; /* Cor de fundo cinza */
+
   height: auto; /* Altura do header */
 `;
 

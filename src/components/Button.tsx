@@ -4,7 +4,9 @@ import styled from "styled-components";
 
 const ButtonContainer = styled.div<{ variant: "lg" | "md"; margin?: string }>`
   border-width: 0;
-  background: #565656;
+  border-radius: 6.951px;
+  border: 0.579px solid #3E0C65;
+  background: #8033BA;
   border-radius: 1rem;
   position: relative;
   color: #fff;
