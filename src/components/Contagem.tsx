@@ -84,7 +84,7 @@ useEffect(() => {
 
 <ContagemWrapper>
 
-    <img src="/assets/clock.png"/> 
+    <img src="./assets/clock.png"/> 
     <div className="flex-column my-auto mx-1">
 
         <span> {fullHour.days} dias</span>

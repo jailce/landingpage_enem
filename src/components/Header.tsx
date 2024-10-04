@@ -7,10 +7,8 @@ import Image from 'next/image';
 // const logo = require('../assets/logo.png');
 
 const Logo = styled.div`
-max-width:108px;
-max-height: 58px;
-
-
+  max-width:108px;
+  max-height: 58px;
 
   width: 108px;
   height: 100%;
@@ -32,7 +30,7 @@ export default function Header()  {
 
 <Logo>
 <Image
-         src="/assets/logo.png"
+         src="./assets/logo.png"
          alt="Logo"
          layout="intrinsic"
          width={108}
