@@ -49,14 +49,13 @@ interface ButtonProps {
 const ButtonLabel = styled.span<{ variant: "lg" | "md" }>`
   font-size: ${(props) => (props.variant === "lg" ? "18px" : "16px")};
 `;
-export default function Button({
-  label,
+const Button: React.FC<ButtonProps> = ({ label,
   margin,
   onClick,
   icon: IconComponent,
   size = "24px",
   variant = "lg",
-}) {
+}) => {
   return (
     <ButtonContainer onClick={onClick} margin={margin} variant={variant}>
       {IconComponent && (
@@ -69,4 +68,4 @@ export default function Button({
     </ButtonContainer>
   );
 }
-export { Button };
+export default Button;
