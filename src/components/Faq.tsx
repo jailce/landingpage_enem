@@ -11,23 +11,31 @@ const FaqContainer = styled.div`
   max-width: 768px;
   justify-content: center; /* Alinhamento horizontal ao centro */
   align-items: center; /* Alinhamento vertical ao centro */
-
+  background: linear-gradient(0deg, #333d524c 0%, #333d52 100%);
   height: auto; /* Altura do header */
+  border-radius: 30px;
+  border: 1px solid #ffffff4b;
+  box-shadow: inset 0px 0px 10px #0154a1, 0px 0px 20px #0154a1; 
+  padding:2rem;
 `;
 
 const Titulo = styled.p`
   font-weight: 800;
   margin-bottom: 0.8rem;
+  font-size: 20px;
 `;
 
 const FaqItem = styled.div`
-  display: flex;
+
   flex-direction: column;
   padding: 0.6rem 0;
-  justify-content: center; /* Alinhamento horizontal ao centro */
+  text-align: left;
+  font-size: 16px;
   align-items: center; /* Alinhamento vertical ao centro */
 
   height: auto; /* Altura do header */
+ width: 100%;
+ 
 `;
 
 const Pergunta = styled.p`

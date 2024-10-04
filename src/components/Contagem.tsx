@@ -20,6 +20,7 @@ width: auto;
   span{
     font-size: 24px;
     line-height: 0;
+    color: #6a03b8 !important;
   }
  p {
     font-size: 12px;

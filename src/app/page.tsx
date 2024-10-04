@@ -8,7 +8,8 @@ import Input from "../components/Input";
 import Footer from "../components/Footer";
 import Section from "../components/Section";
 import styled from "styled-components";
-
+import styles from './page.module.css';
+import { useEffect } from 'react';
 
 
 const faqData = [
@@ -37,23 +38,70 @@ const faqData = [
 const Background = styled.div`
 
 position: relative;
-background-color: #00d170;
+
 
   &::before {
     content: "";
-    position: absolute;
+    /* position: absolute;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
     height: 100%;
     background-image: url("/assets/pattern.png");
-    opacity: 9%;
+    opacity: 9%; */
   }
 `;
 export default function Home() {
+
+  useEffect(() => {
+    const starCount = 25;
+    const shootingStarInterval = 9000;
+
+    const createStar = () => {
+      const star = document.createElement('div');
+      star.className = styles.star;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      document.getElementById('stars')?.appendChild(star);
+    };
+
+    const createShootingStar = () => {
+      const shootingStar = document.createElement('div');
+      shootingStar.className = styles.shootingStar;
+      shootingStar.style.top = `${Math.random() * 100}%`;
+      shootingStar.style.left = `${Math.random() * 100}%`;
+      document.body.appendChild(shootingStar);
+      setTimeout(() => {
+        document.body.removeChild(shootingStar);
+      }, 8000);
+    };
+
+    const generateStars = () => {
+      for (let i = 0; i < starCount; i++) {
+        createStar();
+      }
+    };
+
+    generateStars();
+    setTimeout(createShootingStar, Math.random() * shootingStarInterval);
+
+    const randomizeShootingStarInterval = () => {
+      const interval = Math.random() * shootingStarInterval;
+      setTimeout(() => {
+        createShootingStar();
+        randomizeShootingStarInterval();
+      }, interval);
+    };
+
+    randomizeShootingStarInterval();
+  }, []);
+
+
+
   return (
-    <>
+  <>
+    <div id="stars" className={styles.stars}/>
       <Background>
    
       <Hero />
@@ -63,7 +111,7 @@ export default function Home() {
         <Screens />
       </Section>
 
-      <Section bgColor={"#fdffb5"}> 
+      <Section>
         <Faq title="Perguntas Frequentes" faqItems={faqData} />
       </Section>
 
@@ -74,9 +122,10 @@ export default function Home() {
         />
       </Section>
 
-      <Section bgColor={"#2E2F38"}>
+      <Section bgColor={"#00091D"}>
         <Footer />
       </Section>
-    </>
+    
+</>
   );
 }

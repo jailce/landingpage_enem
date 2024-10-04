@@ -5,19 +5,35 @@
 :root {
   --background1: #000c27;
   --background2: #333d52;
-  --link: #6a03b8;
+  --link: #8033ba;
   --primary: #8033ba;
   --secondary: #00d170;
   --textBase: #f2f2f2;
 }
 
-
+html {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #000c27 30%, #012e58 100%);
+}
 
 body {
   color: var(--textBase);
-  background: var(--background);
+
+
+
+
+  min-height: 100vh;
+
+ 
   font-family: Nunito, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+overflow-x: hidden;
+
 }
+
 
 section {
   height: auto; 
@@ -26,12 +42,17 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
+  padding: 0;
   align-items: center;
-  text-align: center;
-  color: #333; /* Cor do texto */
+  overflow: hidden;
+  color: var( --textBase); /* Cor do texto */
 
   padding: 1rem 1rem;
 }
+
+
+
 
 @layer utilities {
   .text-balance {

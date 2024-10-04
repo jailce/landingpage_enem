@@ -21,6 +21,7 @@ const InputContainer = styled.input`
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
+  background-color: transparent;
   border-radius: 4px;
   max-width: 250px;
   width:auto;
@@ -32,7 +33,7 @@ const InputContainer = styled.input`
   }
 
   &:focus {
-    border-color: #0070f3;
+    border-color: #38c90c;
     outline: none;
   }
 `;

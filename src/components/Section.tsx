@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const SectionWrapper = styled.section<{ bgColor?: string }>`
   background-color: ${({ bgColor }) => bgColor || 'transparent'};
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
