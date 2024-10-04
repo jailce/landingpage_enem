@@ -31,9 +31,9 @@ width: auto;
 
 
 `
-interface CountdownProps {
-    targetDate: Date;
-  }
+// interface CountdownProps {
+//     targetDate: Date;
+//   }
 
 export default function Contagem() {
 

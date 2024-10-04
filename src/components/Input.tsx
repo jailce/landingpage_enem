@@ -36,7 +36,7 @@ const InputContainer = styled.input`
     border-color: #38c90c;
     outline: none;
   }
-`;
+`;   // @ts-expect-error: Ignorando erro de tipo por conta
 export default function Input({title}) {
 
     const [email, setEmail] = useState('');
@@ -82,7 +82,7 @@ export default function Input({title}) {
         onChange={(e) => setEmail(e.target.value) } 
         disabled={isSubmitted}
         />
-
+   {/*  @ts-expect-error:Ignorando erro de tipo por conta */}
         {!isSubmitted && (<Button label="Enviar" variant='md'  onClick={handleSubmit}/>)} 
 
       </InputWrapper>

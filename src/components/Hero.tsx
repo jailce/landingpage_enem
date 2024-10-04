@@ -165,7 +165,7 @@ export default function Hero() {
             cadastre-se
           </Link>
         </p>
-
+        {/* @ts-expect-error: Ignorando erro de tipo por conta d */}
         <Button label="Baixe o App" margin="2px" icon={PhoneRegular} />
       </div>
       <Playerfx>
