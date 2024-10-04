@@ -135,7 +135,7 @@ export default function Hero() {
     <HeroSection>
       <Logo>
         <Image
-          src="/assets/logo.png"
+          src="./assets/logo.png"
           alt="Logo"
           layout="intrinsic"
           width={108}
@@ -171,7 +171,7 @@ export default function Hero() {
       <Playerfx>
         <PlayerWrapper>
           <StyledReactPlayer
-            url={"/assets/nivelamentoteaser.mp4"}
+            url={"./assets/nivelamentoteaser.mp4"}
             playing={true}
             controls={false}
             muted={true}
