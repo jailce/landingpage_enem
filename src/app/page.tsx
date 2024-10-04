@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Screens from "../components/Screens";
 import Faq from "../components/Faq";
