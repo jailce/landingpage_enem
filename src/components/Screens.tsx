@@ -18,7 +18,7 @@ export default function Screens() {
 
 <ScreenWrapper>
 <Image
-          src="/assets/01.png" // Caminho para a logo (certifique-se de que a logo esteja na pasta public)
+          src="./assets/01.png" // Caminho para a logo (certifique-se de que a logo esteja na pasta public)
           alt="Logo"
           width={140}
           height={100}
@@ -30,7 +30,7 @@ export default function Screens() {
 
 
 <Image
-          src="/assets/02.png" // Caminho para a logo (certifique-se de que a logo esteja na pasta public)
+          src="./assets/02.png" // Caminho para a logo (certifique-se de que a logo esteja na pasta public)
           alt="Logo"
           width={140}
           height={100}
